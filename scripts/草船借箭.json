@@ -1,0 +1,41 @@
+{
+  "title": "草船借箭：诸葛亮的智谋巅峰",
+  "scenes": [
+    {
+      "title": "赤壁之战前夕",
+      "body": "周瑜嫉妒诸葛亮的才能，设下毒计：要求他在十天内造出十万支箭，否则军法处置。",
+      "keywords": ["周瑜", "诸葛亮", "十万支箭", "军法处置"],
+      "imagePrompt": "ancient Chinese naval battle, red cliff, warships, foggy river, Three Kingdoms era"
+    },
+    {
+      "title": "立军令状",
+      "body": "诸葛亮却淡定地说：三天即可。他立下军令状，看似自取灭亡，实则胸有成竹。",
+      "keywords": ["三天", "军令状", "胸有成竹"],
+      "imagePrompt": "ancient Chinese scholar writing document, brush and ink, calm expression, Three Kingdoms period"
+    },
+    {
+      "title": "大雾江面",
+      "body": "第三天凌晨，江面大雾弥漫。诸葛亮率领二十艘扎满草人的船只，擂鼓呐喊，直逼曹军水寨。",
+      "keywords": ["大雾", "草船", "擂鼓呐喊"],
+      "imagePrompt": "thick fog on river, ancient Chinese boats, straw figures on deck, mysterious atmosphere"
+    },
+    {
+      "title": "曹操中计",
+      "body": "曹操生性多疑，见大雾中敌军来袭，不敢出战，下令万箭齐发。箭如雨下，尽数射在草人之上。",
+      "keywords": ["曹操", "万箭齐发", "草人"],
+      "imagePrompt": "ancient Chinese archers shooting arrows, arrows flying in the air, military camp, night battle"
+    },
+    {
+      "title": "满载而归",
+      "body": "天将破晓，雾散船回。每艘船满载箭矢，总计超过十万支。诸葛亮不费一兵一卒，智取曹军。",
+      "keywords": ["满载而归", "不费一兵一卒", "智取"],
+      "imagePrompt": "boats filled with arrows, sunrise, ancient Chinese river, victory scene"
+    },
+    {
+      "title": "智谋启示",
+      "body": "草船借箭告诉我们：真正的智慧不是蛮干，而是借势。借天时、借地利、借人心，化被动为主动。",
+      "keywords": ["借势", "化被动为主动", "智慧"],
+      "imagePrompt": "ancient Chinese scroll, wisdom, strategy, philosophical, calligraphy"
+    }
+  ]
+}

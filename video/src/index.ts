@@ -1,5 +1,6 @@
-// Remotion 入口文件 - 注册根组件
+// Remotion entry point
 import { registerRoot } from "remotion";
 import { RemotionRoot } from "./Root";
+import "./style.css";
 
 registerRoot(RemotionRoot);

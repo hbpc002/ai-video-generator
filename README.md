@@ -5,7 +5,7 @@ AI-powered short video batch generator. Input a topic → AI generates script + 
 ## Features
 
 - **AI Script Generation** — Gemini API generates structured video scripts with scenes, titles, and body copy
-- **Auto Image Sourcing** — Gemini image generation or Unsplash API for scene visuals
+- **Auto Image Sourcing** — Free image APIs: Pexels / Pixabay / Unsplash (auto fallback, no API key required)
 - **Video Rendering** — Remotion renders vertical 1080×1920 videos (9:16, optimized for TikTok / Xiaohongshu)
 - **Multiple Styles** — Tech, minimal, and cute visual themes
 - **Job Queue** — Async generation with real-time progress polling
@@ -48,8 +48,11 @@ ai-video-generator/
 ### Prerequisites
 
 - Node.js 18+
-- Google Gemini API key — [Get one here](https://aistudio.google.com/)
-- Unsplash API key (optional) — [Get one here](https://unsplash.com/developers)
+- Google Gemini API key (optional) — [Get one here](https://aistudio.google.com/)
+- **No image API key required** — Uses free APIs: Pexels / Pixabay / Unsplash (auto fallback)
+  - Pexels: [Get free key](https://www.pexels.com/api/) (recommended, 200 req/month free)
+  - Pixabay: [Get free key](https://pixabay.com/api/docs/) (5000 req/hour free)
+  - Unsplash: [Get free key](https://unsplash.com/developers) (50K req/month, requires attribution)
 
 ### Installation
 
