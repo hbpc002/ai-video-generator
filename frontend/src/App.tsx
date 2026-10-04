@@ -7,13 +7,15 @@ import {
   getDownloadUrl,
   type JobStatus,
 } from "./api/client";
+import LessonStudio from "./pages/LessonStudio";
+import ProviderAdmin from "./pages/ProviderAdmin";
 
 type VideoStyle = "tech" | "minimal" | "cute";
 type AppState = "idle" | "loading";
 type InputMode = "topic" | "url";
 
-// 主应用组件
-export default function App() {
+// 抖音短视频工具（原主组件，逻辑未动）
+function ShortVideoTool() {
   const [inputMode, setInputMode] = useState<InputMode>("topic");
   const [topic, setTopic] = useState("");
   const [urlInput, setUrlInput] = useState("");
@@ -283,3 +285,61 @@ export default function App() {
     </div>
   );
 }
+
+// ============================================================
+// 根组件：工具切换
+// ============================================================
+
+type Tool = "short" | "lesson" | "providers";
+
+const TABS: { key: Tool; label: string; hint: string }[] = [
+  { key: "short", label: "抖音短视频", hint: "一句话 → 竖屏短视频" },
+  { key: "lesson", label: "教学视频", hint: "课程设计 → 分层讲解课" },
+  { key: "providers", label: "模型管理", hint: "增删改模型提供商 · 启停 · 自动拉取模型" },
+];
+
+function Root() {
+  const [tool, setTool] = React.useState<Tool>("short");
+  const [, setTick] = React.useState(0);
+  // 必须 useCallback：内联箭头会让 ProviderAdmin 的 effect 依赖链每渲染都变
+  const onProvidersChanged = React.useCallback(() => setTick((t) => t + 1), []);
+
+  return (
+    <div className="min-h-screen tech-bg relative">
+      <div
+        className="absolute inset-0 pointer-events-none opacity-5"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,212,255,0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(0,212,255,0.3) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* 工具切换 */}
+      <nav className="relative z-20 border-b border-cyan-500/20 bg-black/40 backdrop-blur sticky top-0">
+        <div className="max-w-6xl mx-auto px-4 flex gap-1">
+          {TABS.map((t) => (
+            <button
+              key={t.key}
+              onClick={() => setTool(t.key)}
+              className={`px-4 py-3 text-sm transition-colors border-b-2 -mb-px ${
+                tool === t.key
+                  ? "border-cyan-400 text-cyan-300"
+                  : "border-transparent text-white/40 hover:text-white/70"
+              }`}
+              title={t.hint}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {tool === "short" ? <ShortVideoTool />
+        : tool === "lesson" ? <LessonStudio />
+        : <ProviderAdmin onChanged={onProvidersChanged} />}
+    </div>
+  );
+}
+
+export default Root;
