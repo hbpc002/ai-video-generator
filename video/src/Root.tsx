@@ -1,7 +1,9 @@
 import React from "react";
 import { Composition } from "remotion";
 import { ShortVideo } from "./compositions/ShortVideo";
+import { LessonVideo } from "./compositions/LessonVideo";
 import type { ShortVideoProps } from "./types";
+import type { LessonTimeline, LessonVideoProps } from "./lessonTypes";
 
 // Remotion 根组件：注册所有合成
 export const RemotionRoot: React.FC = () => {
@@ -37,6 +39,18 @@ export const RemotionRoot: React.FC = () => {
   // 计算总帧数：开场2秒 + 每场景6秒
   const totalFrames = (2 + defaultScenes.length * 6) * 30;
 
+  // 教学视频：时长由时间轴 JSON 决定，calculateMetadata 里动态算
+  const emptyTimeline: LessonTimeline = {
+    fps: 30,
+    width: 1920,
+    height: 1080,
+    style: "lesson",
+    title: "",
+    sections: [],
+    warnings: [],
+  };
+  const lessonProps: LessonVideoProps = { timeline: emptyTimeline };
+
   return (
     <>
       <Composition
@@ -52,6 +66,36 @@ export const RemotionRoot: React.FC = () => {
           // 动态计算时长
           const frames = (2 + (props as unknown as ShortVideoProps).scenes.length * 6) * 30;
           return { durationInFrames: frames };
+        }}
+      />
+
+      <Composition
+        id="LessonVideo"
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        component={LessonVideo as any}
+        durationInFrames={30}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={lessonProps}
+        calculateMetadata={({ props }) => {
+          const tl = (props as unknown as LessonVideoProps).timeline;
+          const fps = tl.fps || 30;
+          const TITLE = 3.5;
+          const SECTION = 2.2;
+          let sec = TITLE;
+          for (const s of tl.sections) {
+            if (s.title) sec += SECTION;
+            for (const b of s.beats) {
+              sec += b.durationSec + (b.quiz?.pauseSec ?? 0);
+            }
+          }
+          return {
+            durationInFrames: Math.max(1, Math.round(sec * fps)),
+            width: tl.width || 1920,
+            height: tl.height || 1080,
+            fps,
+          };
         }}
       />
     </>

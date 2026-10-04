@@ -1,0 +1,151 @@
+{
+  "title": "数学与语文：两节课的混合示例",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "style": "lesson",
+  "sections": [
+    {
+      "title": "直角三角形的秘密",
+      "beats": [
+        {
+          "narration": "勾股定理说，在直角三角形中，两条直角边的平方和，等于斜边的平方。",
+          "layout": "center",
+          "visuals": [
+            {
+              "id": "tri",
+              "type": "diagram",
+              "at": "直角三角形",
+              "layout": {
+                "x": 27,
+                "y": 46,
+                "w": 34
+              },
+              "strokeWidth": 5,
+              "drawDuration": 1.4
+            },
+            {
+              "id": "eq-main",
+              "type": "equation",
+              "at": "平方和",
+              "latex": "a^2+b^2=c^2",
+              "reveal": "term-by-term",
+              "layout": {
+                "x": 70,
+                "y": 44,
+                "w": 46
+              }
+            },
+            {
+              "id": "hl-c",
+              "type": "highlight",
+              "at": "斜边",
+              "target": "eq-main",
+              "layout": {
+                "x": 79,
+                "y": 44,
+                "w": 12
+              }
+            }
+          ]
+        },
+        {
+          "narration": "来看这个例子。直角边分别是三和四，斜边是五。三的平方加四的平方，等于二十五，正好是五的平方。",
+          "layout": "left-text-right-visual",
+          "visuals": [
+            {
+              "id": "eq-num",
+              "type": "equation",
+              "at": "三和四",
+              "latex": "3^2+4^2=5^2",
+              "reveal": "term-by-term",
+              "layout": {
+                "x": 68,
+                "y": 38,
+                "w": 50
+              }
+            },
+            {
+              "id": "calc",
+              "type": "list",
+              "at": "二十五",
+              "layout": {
+                "x": 66,
+                "y": 68,
+                "w": 46
+              },
+              "items": [
+                "3² + 4² = 9 + 16",
+                "9 + 16 = 25",
+                "25 = 5²  ✓"
+              ]
+            }
+          ],
+          "quiz": {
+            "question": "如果直角边是 6 和 8，斜边是多少？",
+            "options": [
+              "10",
+              "12",
+              "14"
+            ],
+            "pauseSec": 4
+          }
+        }
+      ]
+    },
+    {
+      "title": "七步成诗的传说",
+      "beats": [
+        {
+          "narration": "公元二百二十二年，曹植被父亲曹操围在城中，命令他七步成诗。",
+          "layout": "center",
+          "visuals": [
+            {
+              "id": "hl-board",
+              "type": "highlight",
+              "at": "围在城中",
+              "layout": {
+                "x": 50,
+                "y": 72,
+                "w": 34
+              }
+            },
+            {
+              "id": "board-1",
+              "type": "board",
+              "at": "七步成诗",
+              "text": "七步成诗",
+              "font": "hand",
+              "layout": {
+                "x": 50,
+                "y": 44,
+                "w": 44
+              }
+            }
+          ]
+        },
+        {
+          "narration": "相传他只用七步，就吟出了流传千古的名篇。这一段故事，后来被写进了教材。",
+          "layout": "center",
+          "visuals": [
+            {
+              "id": "list-2",
+              "type": "list",
+              "at": "流传千古",
+              "layout": {
+                "x": 50,
+                "y": 50,
+                "w": 56
+              },
+              "items": [
+                "七步之内成诗",
+                "名篇流传千古",
+                "写入语文教材"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

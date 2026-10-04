@@ -2,6 +2,20 @@
 node_modules/
 **/node_modules/
 
+# Python 虚拟环境
+# pipeline/manim-venv 有 480MB，且含平台相关的 .so 二进制，
+# 换台机器直接用不了。装法见 README：
+#   python3 -m venv pipeline/manim-venv
+#   pipeline/manim-venv/bin/pip install manim
+.venv/
+venv/
+**/venv/
+# 注意：manim-venv 是「连字符 + venv」，上面的 **/venv/ 匹配不到
+pipeline/manim-venv/
+*-venv/
+__pycache__/
+*.pyc
+
 # Environment variables
 .env
 .env.local
@@ -13,6 +27,16 @@ dist/
 output/
 *.mp4
 *.mov
+*.mp3
+
+# 流水线中间产物与生成素材（都可由 lesson JSON 重新生成）
+tmp/
+video/out/
+video/public/audio/
+video/public/manim/
+video/public/images/
+video/lesson-*-props.json
+video/*-props.json
 
 # Logs
 *.log
@@ -24,3 +48,6 @@ npm-debug.log*
 # Internal planning docs
 CLAUDE.md
 backend/.env
+
+# LLM provider 配置（含密钥，切勿提交）
+config/providers.json
