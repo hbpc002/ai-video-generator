@@ -1,0 +1,41 @@
+{
+  "title": "DeepSeek 为什么震惊全世界",
+  "scenes": [
+    {
+      "title": "中国 AI 的黑马",
+      "body": "DeepSeek 一夜之间成为全球最热门的 AI 模型，震惊硅谷",
+      "keywords": ["DeepSeek", "黑马", "AI"],
+      "imageUrl": ""
+    },
+    {
+      "title": "性能对标 GPT-4",
+      "body": "DeepSeek-R1 在数学、代码、推理上全面超越 GPT-4，成本却只有几十分之一",
+      "keywords": ["性能", "推理", "成本"],
+      "imageUrl": ""
+    },
+    {
+      "title": "训练成本惊人",
+      "body": "仅用 560 万美元就训练出顶级模型，而 OpenAI 花了数十亿美元",
+      "keywords": ["训练成本", "效率", "创新"],
+      "imageUrl": ""
+    },
+    {
+      "title": "完全开源",
+      "body": "模型权重、训练方法、论文全部公开，任何人都可以免费使用和部署",
+      "keywords": ["开源", "免费", "透明"],
+      "imageUrl": ""
+    },
+    {
+      "title": "引发的股市震荡",
+      "body": "DeepSeek 发布当天，英伟达市值蒸发 6000 亿美元，全球震惊",
+      "keywords": ["股市", "英伟达", "影响"],
+      "imageUrl": ""
+    },
+    {
+      "title": "AI 的平民化时代",
+      "body": "不需要天价 GPU，中小企业也能拥有顶级 AI 能力",
+      "keywords": ["平民化", "普惠", "未来"],
+      "imageUrl": ""
+    }
+  ]
+}

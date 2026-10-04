@@ -1,0 +1,40 @@
+{
+  "title": "AI 如何改变教育",
+  "scenes": [
+    {
+      "title": "个性化学习",
+      "body": "AI 根据每个学生的学习节奏和风格，定制专属的学习路径，让每个人都能以最适合自己的方式进步。",
+      "keywords": ["个性化", "自适应", "学习路径"],
+      "imagePrompt": "artificial intelligence education personalized learning",
+      "imageUrl": ""
+    },
+    {
+      "title": "智能辅导系统",
+      "body": "24小时在线的 AI 导师随时解答疑问，即时反馈帮助学生快速纠正错误，学习效率提升数倍。",
+      "keywords": ["AI 导师", "即时反馈", "智能辅导"],
+      "imagePrompt": "AI tutor robot teaching student",
+      "imageUrl": ""
+    },
+    {
+      "title": "数据驱动决策",
+      "body": "通过分析海量学习数据，AI 帮助教师发现教学盲点，精准定位需要加强的知识点。",
+      "keywords": ["数据分析", "教学优化", "精准教学"],
+      "imagePrompt": "data analytics dashboard education",
+      "imageUrl": ""
+    },
+    {
+      "title": "打破地域限制",
+      "body": "AI 翻译和智能字幕让优质教育资源跨越语言障碍，知识无国界，学习无边界。",
+      "keywords": ["无国界", "翻译", "远程教育"],
+      "imagePrompt": "global education online learning",
+      "imageUrl": ""
+    },
+    {
+      "title": "未来已来",
+      "body": "AI 不是取代教师，而是赋能教育。人机协作的时代，教育将变得更加公平、高效、个性化。",
+      "keywords": ["未来教育", "人机协作", "教育公平"],
+      "imagePrompt": "future technology education innovation",
+      "imageUrl": ""
+    }
+  ]
+}
