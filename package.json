@@ -14,7 +14,13 @@
     "build": "npm run build --workspaces",
     "install:all": "npm install",
     "gen": "npx tsx generate.ts",
-    "studio": "npm run start --workspace=video"
+    "studio": "npm run start --workspace=video",
+    "lesson:design": "npx tsx pipeline/design-lesson.ts",
+    "lesson:code": "npx tsx pipeline/gen-manim.ts",
+    "lesson:timeline": "python3 pipeline/edge_timeline.py",
+    "lesson:manim": "python3 pipeline/render_manim.py",
+    "lesson:props": "npx tsx pipeline/build-lesson-props.ts",
+    "lesson:render": "npm run render --workspace=video -- LessonVideo"
   },
   "devDependencies": {
     "@types/yargs": "^17.0.35",
