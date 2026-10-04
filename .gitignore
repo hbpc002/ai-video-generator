@@ -35,8 +35,8 @@ video/out/
 video/public/audio/
 video/public/manim/
 video/public/images/
-video/lesson-*-props.json
-video/*-props.json
+# 注意：也要覆盖 props.json 这种没有 - 前缀的名字
+video/*props.json
 
 # Logs
 *.log

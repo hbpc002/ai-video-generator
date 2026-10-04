@@ -60,7 +60,11 @@ export interface ProvidersFile {
 }
 
 const DATA_DIR = path.resolve(__dirname, "../../../config");
-const FILE = path.join(DATA_DIR, "providers.json");
+/** 配置路径可用 PROVIDERS_CONFIG 覆盖 —— 测试脚本借此指向临时文件，
+ *  避免验证启停语义时污染真实的 providers.json。 */
+const FILE = process.env.PROVIDERS_CONFIG
+  ? path.resolve(process.env.PROVIDERS_CONFIG)
+  : path.join(DATA_DIR, "providers.json");
 
 /** vendor →协议类型。新增厂商时这里是唯一要动的地方 */
 const KIND_OF: Record<string, VendorKind> = {
